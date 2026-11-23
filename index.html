@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>배현성 포트폴리오 (2026-11)</title>
+<style>
+  :root { --bg: #14161a; --panel: #1c1f25; --line: #2c313a; --text: #e9e6df; --sub: #a8a59c; --gold: #d9b56a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; line-height: 1.65; }
+  main { max-width: 980px; margin: 0 auto; padding: 40px 20px 72px; }
+  h1 { font-size: 28px; margin: 0 0 6px; }
+  h2 { font-size: 20px; margin: 44px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+  p { margin: 8px 0; }
+  .sub { color: var(--sub); font-size: 14px; }
+  a { color: var(--gold); }
+  .btn { display: inline-block; margin: 10px 10px 0 0; padding: 11px 18px; border: 1px solid var(--gold); border-radius: 6px; color: var(--gold); text-decoration: none; font-weight: 700; }
+  .btn:hover { background: var(--gold); color: #14161a; }
+  .video { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+  .video video { width: 100%; max-width: 360px; aspect-ratio: 9 / 16; background: #000; border: 1px solid var(--line); border-radius: 8px; }
+  .video .note { flex: 1 1 320px; }
+  ul { padding-left: 20px; margin: 8px 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+  figure { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  figure img { display: block; width: 100%; height: auto; }
+  figcaption { padding: 8px 10px 10px; font-size: 13px; color: var(--sub); }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--sub); font-weight: 400; width: 190px; }
+  footer { margin-top: 48px; color: var(--sub); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>배현성 포트폴리오</h1>
+  <p class="sub">2026년 11월 기준. 게임 기획으로 출발해 프로그래머로 전향한 개발자입니다. 2026년 9월 말부터 AI 에이전트(Claude Code, Codex)와 게임 세 편을 만들었습니다.</p>
+  <a class="btn" href="portfolio.pdf">포트폴리오 PDF 열기 (10쪽)</a>
+
+  <h2>조선척귀대 (Shaman Survivor) 플레이 영상</h2>
+  <div class="video">
+    <video controls playsinline preload="metadata" poster="media/poster.jpg">
+      <source src="media/yokai_showcase_20261123.mp4" type="video/mp4">
+    </video>
+    <div class="note">
+      <p>밤마다 고을로 넘어오는 한국 요괴를 부적과 마법진으로 쓸어내고, 봉인한 요괴를 다음 밤 수호령으로 부리는 세로 화면 서바이벌 액션입니다. Godot 4.7.2로 만들었고 Google Play 비공개 테스트 단계입니다.</p>
+      <ul>
+        <li>32.7초, 720×1280, 60fps, 소리 없음</li>
+        <li>2026-11-23에 웹 내보내기 화면을 창 없이 촬영했습니다. 폰 실기 캡처가 아닙니다.</li>
+        <li>무기 6칸을 모두 진화시킨 촬영용 설정이며, 레벨업 카드 화면은 걸러 내고 이어 붙였습니다.</li>
+        <li>기획과 방향 결정, 작업 지시와 검수는 제가 했고 구현은 AI 에이전트 세션이 했습니다.</li>
+      </ul>
+      <p><a href="media/yokai_showcase_20261123.mp4">영상 파일 바로 열기</a> · <a href="https://shaman-survivor.web.app/ko/odds.html">확률 공개 페이지</a></p>
+    </div>
+  </div>
+
+  <h2>조선척귀대 스크린샷</h2>
+  <div class="grid">
+    <figure><a href="media/shots/01_battle_swarm_blue_wheel.jpg"><img loading="lazy" src="media/shots/01_battle_swarm_blue_wheel.jpg" alt="1장 요괴 떼 전투"></a><figcaption>1장, 요괴 떼와 푸른 바퀴·금줄진</figcaption></figure>
+    <figure><a href="media/shots/03_boss_gumiho_mandala.jpg"><img loading="lazy" src="media/shots/03_boss_gumiho_mandala.jpg" alt="1장 보스 구미호"></a><figcaption>1장 보스 구미호</figcaption></figure>
+    <figure><a href="media/shots/02_battle_haetae_rope_kites.jpg"><img loading="lazy" src="media/shots/02_battle_haetae_rope_kites.jpg" alt="3장 해태 금줄문"></a><figcaption>3장, 해태 금줄문과 삼족오 연</figcaption></figure>
+    <figure><a href="media/shots/04_boss_hwama_flame_lanes.jpg"><img loading="lazy" src="media/shots/04_boss_hwama_flame_lanes.jpg" alt="5장 보스 화마"></a><figcaption>5장 보스 화마</figcaption></figure>
+    <figure><a href="media/shots/05_battle_expansion_region.jpg"><img loading="lazy" src="media/shots/05_battle_expansion_region.jpg" alt="확장 지역 11장"></a><figcaption>확장 지역 11장</figcaption></figure>
+    <figure><a href="media/shots/06_boss_dueoksini_wisp_storm.jpg"><img loading="lazy" src="media/shots/06_boss_dueoksini_wisp_storm.jpg" alt="3장 보스 두억시니"></a><figcaption>3장 보스 두억시니</figcaption></figure>
+    <figure><a href="media/shots/07_battle_ch2_teal_swarm.jpg"><img loading="lazy" src="media/shots/07_battle_ch2_teal_swarm.jpg" alt="2장 전투"></a><figcaption>2장, 푸른 바퀴와 사방 금줄진</figcaption></figure>
+    <figure><a href="media/shots/08_battle_ch10_phoenix_kites.jpg"><img loading="lazy" src="media/shots/08_battle_ch10_phoenix_kites.jpg" alt="10장 전투"></a><figcaption>10장, 공명 3종 동시</figcaption></figure>
+    <figure><a href="media/shots/09_costume_obang_equipped.jpg"><img loading="lazy" src="media/shots/09_costume_obang_equipped.jpg" alt="의상 화면"></a><figcaption>의상 화면, 오방 홍철릭</figcaption></figure>
+    <figure><a href="media/shots/10_lobby_obang_worn.jpg"><img loading="lazy" src="media/shots/10_lobby_obang_worn.jpg" alt="로비"></a><figcaption>로비(마을)</figcaption></figure>
+    <figure><a href="media/shots/11_war_map_daedongyeojido.jpg"><img loading="lazy" src="media/shots/11_war_map_daedongyeojido.jpg" alt="전쟁 지도"></a><figcaption>대동여지도 전쟁 지도. 재화·전황 수치는 촬영용 값입니다.</figcaption></figure>
+  </div>
+
+  <h2>다른 프로젝트</h2>
+  <table>
+    <tr><th>견습 마녀 키우기</th><td>방치형 RPG. Google Play 공개. <a href="https://play.google.com/store/apps/details?id=com.lunamethod.lanternmage">스토어 페이지</a></td></tr>
+    <tr><th>CHAIN DEAL</th><td>단일 HTML 로그라이크 덱빌더. <a href="https://kkp8121-rgb.github.io/chain-deal/">웹에서 플레이</a> · <a href="https://github.com/kkp8121-rgb/chain-deal">소스</a></td></tr>
+    <tr><th>바닷길 상단 (가칭)</th><td>자동 항해 교역 게임. 출시 전이라 공개 링크가 없습니다. 내용은 PDF에 있습니다.</td></tr>
+    <tr><th>회사 프로젝트</th><td>소스 비공개. 담당 범위는 PDF에 있습니다.</td></tr>
+  </table>
+
+  <footer>이 페이지의 수치와 설명은 PDF와 같은 기준(git 기록과 문서, 2026-11-23)으로 적었습니다.</footer>
+</main>
+</body>
+</html>
