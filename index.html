@@ -8,20 +8,29 @@
 <style>
   :root { --bg: #14161a; --panel: #1c1f25; --line: #2c313a; --text: #e9e6df; --sub: #a8a59c; --gold: #d9b56a; }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body { margin: 0; background: var(--bg); color: var(--text); font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; line-height: 1.65; }
-  main { max-width: 980px; margin: 0 auto; padding: 40px 20px 72px; }
+  main { max-width: 1040px; margin: 0 auto; padding: 40px 20px 72px; }
   h1 { font-size: 28px; margin: 0 0 6px; }
-  h2 { font-size: 20px; margin: 44px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+  h2 { font-size: 22px; margin: 56px 0 4px; padding-top: 8px; }
+  h3 { font-size: 15px; margin: 22px 0 10px; color: var(--sub); font-weight: 400; }
   p { margin: 8px 0; }
   .sub { color: var(--sub); font-size: 14px; }
+  .state { color: var(--gold); font-size: 14px; margin: 0 0 14px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
   a { color: var(--gold); }
   .btn { display: inline-block; margin: 10px 10px 0 0; padding: 11px 18px; border: 1px solid var(--gold); border-radius: 6px; color: var(--gold); text-decoration: none; font-weight: 700; }
   .btn:hover { background: var(--gold); color: #14161a; }
+  nav { margin-top: 18px; font-size: 15px; }
+  nav a { margin-right: 16px; }
   .video { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
-  .video video { width: 100%; max-width: 360px; aspect-ratio: 9 / 16; background: #000; border: 1px solid var(--line); border-radius: 8px; }
-  .video .note { flex: 1 1 320px; }
+  .video video { background: #000; border: 1px solid var(--line); border-radius: 8px; }
+  .video video.tall { width: 100%; max-width: 340px; aspect-ratio: 9 / 16; }
+  .video video.wide { width: 100%; max-width: 640px; aspect-ratio: 16 / 9; }
+  .video .note { flex: 1 1 300px; }
   ul { padding-left: 20px; margin: 8px 0; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+  .grid { display: grid; gap: 14px; }
+  .grid.tall { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+  .grid.wide { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
   figure { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
   figure img { display: block; width: 100%; height: auto; }
   figcaption { padding: 8px 10px 10px; font-size: 13px; color: var(--sub); }
@@ -34,28 +43,28 @@
 <body>
 <main>
   <h1>배현성 포트폴리오</h1>
-  <p class="sub">2026년 11월 기준. 게임 기획으로 출발해 프로그래머로 전향한 개발자입니다. 2026년 9월 말부터 AI 에이전트(Claude Code, Codex)와 게임 세 편을 만들었습니다.</p>
+  <p class="sub">2026년 11월 기준. 게임 기획으로 출발해 프로그래머로 전향한 개발자입니다. 2026년 9월 말부터 AI 에이전트(Claude Code, Codex)와 게임 세 편을 만들었습니다. 세 게임 모두 기획과 방향 결정, 작업 지시와 검수는 제가 했고 구현은 AI 에이전트 세션이 했습니다.</p>
   <a class="btn" href="portfolio.pdf">포트폴리오 PDF 열기 (10쪽)</a>
+  <nav>게임 화면 바로 가기: <a href="#yokai">조선척귀대</a><a href="#witch">견습 마녀 키우기</a><a href="#sea">바닷길 상단</a><a href="#chain">CHAIN DEAL</a></nav>
 
-  <h2>조선척귀대 (Shaman Survivor) 플레이 영상</h2>
+  <h2 id="yokai">조선척귀대 (Shaman Survivor)</h2>
+  <p class="state">세로 화면 서바이벌 액션 · Godot 4.7.2 · Google Play 비공개 테스트 단계</p>
   <div class="video">
-    <video controls playsinline preload="metadata" poster="media/poster.jpg">
+    <video class="tall" controls playsinline preload="metadata" poster="media/poster.jpg">
       <source src="media/yokai_showcase_20261123.mp4" type="video/mp4">
     </video>
     <div class="note">
-      <p>밤마다 고을로 넘어오는 한국 요괴를 부적과 마법진으로 쓸어내고, 봉인한 요괴를 다음 밤 수호령으로 부리는 세로 화면 서바이벌 액션입니다. Godot 4.7.2로 만들었고 Google Play 비공개 테스트 단계입니다.</p>
+      <p>밤마다 고을로 넘어오는 한국 요괴를 부적과 마법진으로 쓸어내고, 봉인한 요괴를 다음 밤 수호령으로 부리는 게임입니다.</p>
       <ul>
-        <li>32.7초, 720×1280, 60fps, 소리 없음</li>
+        <li>영상 32.7초, 720×1280, 60fps, 소리 없음</li>
         <li>2026-11-23에 웹 내보내기 화면을 창 없이 촬영했습니다. 폰 실기 캡처가 아닙니다.</li>
         <li>무기 6칸을 모두 진화시킨 촬영용 설정이며, 레벨업 카드 화면은 걸러 내고 이어 붙였습니다.</li>
-        <li>기획과 방향 결정, 작업 지시와 검수는 제가 했고 구현은 AI 에이전트 세션이 했습니다.</li>
       </ul>
-      <p><a href="media/yokai_showcase_20261123.mp4">영상 파일 바로 열기</a> · <a href="https://shaman-survivor.web.app/ko/odds.html">확률 공개 페이지</a></p>
+      <p><a href="media/yokai_showcase_20261123.mp4">영상 파일 바로 열기</a></p>
     </div>
   </div>
-
-  <h2>조선척귀대 스크린샷</h2>
-  <div class="grid">
+  <h3>스크린샷</h3>
+  <div class="grid tall">
     <figure><a href="media/shots/01_battle_swarm_blue_wheel.jpg"><img loading="lazy" src="media/shots/01_battle_swarm_blue_wheel.jpg" alt="1장 요괴 떼 전투"></a><figcaption>1장, 요괴 떼와 푸른 바퀴·금줄진</figcaption></figure>
     <figure><a href="media/shots/03_boss_gumiho_mandala.jpg"><img loading="lazy" src="media/shots/03_boss_gumiho_mandala.jpg" alt="1장 보스 구미호"></a><figcaption>1장 보스 구미호</figcaption></figure>
     <figure><a href="media/shots/02_battle_haetae_rope_kites.jpg"><img loading="lazy" src="media/shots/02_battle_haetae_rope_kites.jpg" alt="3장 해태 금줄문"></a><figcaption>3장, 해태 금줄문과 삼족오 연</figcaption></figure>
@@ -69,11 +78,60 @@
     <figure><a href="media/shots/11_war_map_daedongyeojido.jpg"><img loading="lazy" src="media/shots/11_war_map_daedongyeojido.jpg" alt="전쟁 지도"></a><figcaption>대동여지도 전쟁 지도. 재화·전황 수치는 촬영용 값입니다.</figcaption></figure>
   </div>
 
-  <h2>다른 프로젝트</h2>
+  <h2 id="witch">견습 마녀 키우기 (Apprentice Witch Idle)</h2>
+  <p class="state">세로 화면 방치형 RPG · Phaser 3 + TypeScript · Google Play 공개</p>
+  <div class="video">
+    <video class="tall" controls playsinline preload="metadata" poster="media/witch/01.jpg">
+      <source src="media/witch/witch_promo_ko.mp4" type="video/mp4">
+    </video>
+    <div class="note">
+      <p>견습 마녀가 사역마와 길을 떠나 몬스터를 쓸어 담고 등급 시험을 거쳐 대마녀가 되는 게임입니다. 한국어·영어·일본어·번체 중국어로 서비스합니다.</p>
+      <ul>
+        <li>영상 29.2초, 1080×1920, 소리 없음. 스토어용으로 만든 소개 영상이라 화면 아래에 안내 문구가 들어 있습니다.</li>
+        <li>아래 스크린샷은 문구를 얹기 전의 게임 화면입니다.</li>
+      </ul>
+      <p><a href="https://play.google.com/store/apps/details?id=com.lunamethod.lanternmage">Google Play 스토어 페이지</a> · <a href="media/witch/witch_promo_ko.mp4">영상 파일 바로 열기</a></p>
+    </div>
+  </div>
+  <h3>스크린샷</h3>
+  <div class="grid tall">
+    <figure><a href="media/witch/01.jpg"><img loading="lazy" src="media/witch/01.jpg" alt="사냥과 능력치 강화"></a><figcaption>사냥과 능력치 강화</figcaption></figure>
+    <figure><a href="media/witch/05.jpg"><img loading="lazy" src="media/witch/05.jpg" alt="보스전"></a><figcaption>보스전, 누적 피해 표시</figcaption></figure>
+    <figure><a href="media/witch/02.jpg"><img loading="lazy" src="media/witch/02.jpg" alt="사역마 소환 결과"></a><figcaption>사역마 소환 결과</figcaption></figure>
+    <figure><a href="media/witch/03.jpg"><img loading="lazy" src="media/witch/03.jpg" alt="가마솥"></a><figcaption>가마솥</figcaption></figure>
+    <figure><a href="media/witch/04.jpg"><img loading="lazy" src="media/witch/04.jpg" alt="승급 시험"></a><figcaption>승급 시험</figcaption></figure>
+    <figure><a href="media/witch/06.jpg"><img loading="lazy" src="media/witch/06.jpg" alt="방치 상자와 빠른 사냥"></a><figcaption>방치 상자와 빠른 사냥</figcaption></figure>
+  </div>
+
+  <h2 id="sea">바닷길 상단 (가칭 Sea Trade)</h2>
+  <p class="state">가로 화면 자동 항해 교역 게임 · Godot 4.7.2 · 출시 전</p>
+  <div class="video">
+    <video class="wide" controls playsinline preload="metadata" poster="media/sea/01_sail_clear_day.jpg">
+      <source src="media/sea/sea_voyage_20261113.mp4" type="video/mp4">
+    </video>
+    <div class="note">
+      <p>실제 동아시아 지형의 항구 28곳에서 바람과 계절을 읽어 범선 상단을 키우는 게임입니다.</p>
+      <ul>
+        <li>영상 33.3초, 1920×1080, 소리 없음. 낮 항해, 해도, 조선소, 선단, 밤 항해 순서입니다.</li>
+        <li>개발 중인 판을 2026-11-13에 촬영했습니다.</li>
+      </ul>
+      <p><a href="media/sea/sea_voyage_20261113.mp4">영상 파일 바로 열기</a></p>
+    </div>
+  </div>
+  <h3>스크린샷</h3>
+  <div class="grid wide">
+    <figure><a href="media/sea/01_sail_clear_day.jpg"><img loading="lazy" src="media/sea/01_sail_clear_day.jpg" alt="맑은 날 항해"></a><figcaption>맑은 날 항해</figcaption></figure>
+    <figure><a href="media/sea/02_sail_star_rain.jpg"><img loading="lazy" src="media/sea/02_sail_star_rain.jpg" alt="별똥별 밤바다"></a><figcaption>별똥별이 떨어지는 밤바다</figcaption></figure>
+    <figure><a href="media/sea/03_harbor.jpg"><img loading="lazy" src="media/sea/03_harbor.jpg" alt="항구 화면"></a><figcaption>항구 화면(부산포)</figcaption></figure>
+    <figure><a href="media/sea/04_chart.jpg"><img loading="lazy" src="media/sea/04_chart.jpg" alt="바닷길 해도"></a><figcaption>바닷길 해도와 출항 창</figcaption></figure>
+    <figure><a href="media/sea/05_shipyard.jpg"><img loading="lazy" src="media/sea/05_shipyard.jpg" alt="조선소"></a><figcaption>조선소</figcaption></figure>
+    <figure><a href="media/sea/06_newgame.jpg"><img loading="lazy" src="media/sea/06_newgame.jpg" alt="새 게임"></a><figcaption>새 게임, 시작할 나라 고르기</figcaption></figure>
+  </div>
+
+  <h2 id="chain">CHAIN DEAL · 회사 프로젝트</h2>
+  <p class="state">브라우저에서 바로 해 볼 수 있는 게임과 그 밖의 경력</p>
   <table>
-    <tr><th>견습 마녀 키우기</th><td>방치형 RPG. Google Play 공개. <a href="https://play.google.com/store/apps/details?id=com.lunamethod.lanternmage">스토어 페이지</a></td></tr>
-    <tr><th>CHAIN DEAL</th><td>단일 HTML 로그라이크 덱빌더. <a href="https://kkp8121-rgb.github.io/chain-deal/">웹에서 플레이</a> · <a href="https://github.com/kkp8121-rgb/chain-deal">소스</a></td></tr>
-    <tr><th>바닷길 상단 (가칭)</th><td>자동 항해 교역 게임. 출시 전이라 공개 링크가 없습니다. 내용은 PDF에 있습니다.</td></tr>
+    <tr><th>CHAIN DEAL</th><td>단일 HTML 로그라이크 덱빌더. <a href="https://kkp8121-rgb.github.io/chain-deal/">웹에서 바로 플레이</a> · <a href="https://github.com/kkp8121-rgb/chain-deal">소스</a></td></tr>
     <tr><th>회사 프로젝트</th><td>소스 비공개. 담당 범위는 PDF에 있습니다.</td></tr>
   </table>
 
